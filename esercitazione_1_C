@@ -1,0 +1,38 @@
+//
+//  main.c
+//  esercitazione_1_C
+//
+//  Created by Alessio Russo on 08/12/23.
+//
+/* Calcola la media di una serie di numeri inseriti in input dall'utente*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (void)
+{
+    int i,n,numAttuale,somma;
+    float media;
+    
+    /* inserisco un messaggio di apertura e un inpput per
+    l'utente dove chiedo quanti numeri vuole sommare per la media */
+    
+    printf("Quanti numeri devi inserire per calcolare la media?:\n");
+    scanf("%d", &n);
+    
+    printf("inserisci i tuoi %d numeri:\n", n);
+    
+    somma = 0;
+    for (i=0; i<n;i++) {
+        scanf("%d", &numAttuale);
+        somma = somma+numAttuale;
+    }
+    
+    media = (float)somma/n; //Aggiungo il float avanti media per forzare il tipo di dato
+    printf("La somma dei numeri è pari a:%d \n", somma);
+    printf("la media dei numeri inseriti è pari a: %f \n", media);
+    
+    system("pause");
+    return (0);
+}
