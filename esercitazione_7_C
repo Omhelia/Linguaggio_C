@@ -1,0 +1,39 @@
+/*Chiedere 2 num. interi (a,b) e disegnare un rettangolo di dimensioni a*b usando il carattere " * ".
+*/
+//  main.c
+//  esercitazione_7_C
+//
+//  Created by Alessio Russo on 09/12/23.
+//
+
+#include <stdio.h>
+
+int main (void) {
+   
+     int a, b, i, j;
+     printf ("Inserisci il lato a: ");
+     scanf("%d",&a);
+     printf ("Inserisci il lato b: ");
+     scanf("%d",&b);
+    
+     for (i=0; i<a; i++) {
+     printf ("*");
+     }
+     printf ("\n");
+    
+    
+     for (i=0; i<b-2; i++) {
+     printf ("*");
+     for (j=0; j<a-2; j++) {
+     printf (" ");
+     }
+     printf ("*\n");
+     }
+    
+    
+     for (i=0; i<a; i++) {
+     printf ("*");
+     }
+     printf ("\n");
+    return 0;
+}
