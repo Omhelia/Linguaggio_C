@@ -1,0 +1,44 @@
+//
+
+/*
+ 
+ • Si scriva un programma in linguaggio C che
+ letto un numero intero positivo dallo standard
+ input, visualizzi a terminale il cubo del numero
+ stesso facendo uso soltanto di operazioni di
+ somma.
+ 
+ */
+//  main.c
+//  esercitazione_4_c
+//
+//  Created by Alessio Russo on 08/12/23.
+//
+
+#include <math.h>
+#include <stdio.h>
+
+int main (void) {
+    
+    int i,n;
+    int sumNumber = 0, cube = 0;
+    
+    printf("Inserisci un numero intero positivo:\n");
+    scanf("%d",&n);
+    
+    i = 0;
+    while(i<n) {
+    sumNumber = sumNumber + (i+i+1);
+        i++;
+        }
+    
+    i=0;
+    
+    while (i<n) {
+        cube=cube+sumNumber;
+        i++;
+    }
+    
+    printf("il cubo del numero inserito è: %d \n",cube);
+    return 0;
+}
