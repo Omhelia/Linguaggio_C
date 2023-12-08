@@ -1,0 +1,43 @@
+//
+//  main.c
+//  esercitazipone_6_C
+//
+/*
+ Si scriva un programma che legge una sequenza di
+ caratteri (la sequenza termina quando viene inserito
+ il carattere "#"),conta il numero complessivo di
+ lettere minuscole comprese nella sequenza e stampa
+ questo valore.
+ • Per esempio, nel caso la sequenza in ingresso fosse
+ defghi123jklmaAAa002#
+ il programma dovrebbe stampare il valore 12.
+ */
+//  Created by Alessio Russo on 08/12/23.
+//
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    
+    char seqChar;
+    char string[30] = " ";
+    int counter = 0;
+    
+    printf("inserisci il carattere per la tua stringa termina con '#':\n");
+    
+    do{
+        scanf("%c",&seqChar);
+        strncat(string, &seqChar, 1);
+        
+        if (seqChar >='a' && seqChar <='z'){
+            counter++;
+        }
+        
+    }while(seqChar!='#');
+    
+    printf("la sequenza è: %s\n", string);
+    printf("il numero di lettere minuscole è:%d\n", counter);
+    return 0;
+}
+
