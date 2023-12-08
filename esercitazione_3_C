@@ -1,0 +1,21 @@
+#include <math.h>
+#include <stdio.h>
+
+int main (void) {
+    
+    int i,n;
+    int sumNumber = 0;
+    
+    printf("Inserisci un numero intero positivo:\n");
+    scanf("%d",&n);
+    
+    i = 0;
+    while(i<=n) {
+    sumNumber = sumNumber + (i+i+1);
+        i++;
+        }
+    
+    printf("il quadrato del numero inserito è: %d \n",sumNumber);
+    return 0;
+}
+    
