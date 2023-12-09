@@ -1,0 +1,43 @@
+//
+/*
+ Generare un numero a caso e chiedere all'utente un numero fino a quando non e' uguale a quello
+ generato casualmente. Dire ogni volta se il numero immesso e' > o < di quello iniziale.
+ */
+//  main.c
+//  esercitazione_8_C
+//
+//  Created by Alessio Russo on 09/12/23.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+    
+    int numberCasual, numberUser;
+    // Inizializza il generatore di numeri casuali con il seme dell'orologio di sistema
+        srand((unsigned int)time(NULL));
+    numberCasual = rand()%100;
+    printf("in numero casuale è:%d\n",numberCasual);
+    do{
+        printf("inserisci un umero da 0 a 100 per vincere!:\n");
+        scanf("%d",&numberUser);
+        
+        int numberMax = 0;
+        numberMax = numberUser;
+
+        if(numberMax > numberUser) {
+            printf("il numero è maggiore di quello precedente");
+        }else if (numberMax < numberUser){
+            printf("il nuemro immesso è minore del precedente:\n");
+        }
+    }while (numberCasual != numberUser);
+    
+    if (numberCasual == numberUser) {
+        printf("Hai Vinto il numero indovinato è il: %d\n", numberCasual);
+    }
+        return 0;
+
+    }
+    
